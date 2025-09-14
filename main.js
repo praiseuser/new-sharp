@@ -1,8 +1,6 @@
-// 🌙 Theme Toggle
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Load saved theme
 if (localStorage.getItem("theme") === "light") {
   body.classList.add("light-mode");
   toggleBtn.innerHTML = '<i class="bx bx-sun"></i>';
@@ -10,7 +8,6 @@ if (localStorage.getItem("theme") === "light") {
   toggleBtn.innerHTML = '<i class="bx bx-moon"></i>';
 }
 
-// Toggle theme on click
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("light-mode");
 
@@ -23,7 +20,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-// 🍔 Mobile Menu Toggle
 const menuIcon = document.getElementById("menu-icon");
 const navbar = document.getElementById("navbar");
 
@@ -37,7 +33,6 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-// Close menu when clicking a link
 document.querySelectorAll("#navbar a").forEach(link => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
@@ -45,7 +40,6 @@ document.querySelectorAll("#navbar a").forEach(link => {
   });
 });
 
-// 🔥 Highlight Active Nav Link on Scroll
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
@@ -69,19 +63,32 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ===== SCROLL REVEAL EFFECT =====
-const reveals = document.querySelectorAll(".reveal");
+let testimonials = document.querySelectorAll(".testimonial");
+let currentIndex = 0;
 
-window.addEventListener("scroll", () => {
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 100;
+function showNextTestimonial() {
+  testimonials[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  testimonials[currentIndex].classList.add("active");
+}
 
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
+setInterval(showNextTestimonial, 5000);
+
+const counters = document.querySelectorAll(".counter");
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const speed = 50; 
+    const increment = target / speed;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 50);
     } else {
-      reveals[i].classList.remove("active");
+      counter.innerText = target;
     }
-  }
+  };
+  updateCount();
 });
+
