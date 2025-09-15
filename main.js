@@ -92,12 +92,6 @@ counters.forEach(counter => {
   updateCount();
 });
 
-// FAQ Accordion
-// document.querySelectorAll('.faq-item').forEach(item => {
-//   item.addEventListener('click', () => {
-//     item.classList.toggle('active');
-//   });
-// });
 
 // ===== FAQ Accordion =====
 document.querySelectorAll('.faq-item').forEach(item => {
