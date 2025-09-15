@@ -6,6 +6,15 @@
   <title>My Portfolio</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- ✅ Google Analytics Code -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- ✅ End Google Analytics Code -->
 </head>
 <body>
 
@@ -17,6 +26,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact Me</a>
     </nav>
   
@@ -30,19 +40,22 @@
     </div>
   </header>
   
-  <section id="home" class="home ">
+  <section class="home fade-in" id="home">
     <div class="home-content">
       <div class="home-img">
         <img src="./images/finance-5771541_1280.jpg" alt="My Photo">
       </div>
       <h1>Hi, I’m <span>Ebah Emmanuel</span></h1>
-      <h3>Frontend Developer & Designer / Forex Mentor</h3>
-      <p>I build modern and responsive web experiences.</p>
-      <a href="#portfolio" class="btn">View Projects</a>
+      <h3>Forex Mentor & Developer</h3>
+      <p>I mentor traders, provide VIP signals, and build modern web projects.</p>
+      <!-- <a href="#portfolio" class="btn">View Projects</a> -->
+      <a href="#contact" class="btn">Hire Me</a>
+      <a href="cv.pdf" class="btn" download>Download CV</a>
     </div>
   </section>
 
-  <section id="about" class="about ">
+  
+  <section class="about fade-in" id="about">
     <h2 class="heading">About Me</h2>
     <div class="about-content">
       <div class="about-img">
@@ -71,7 +84,7 @@
   
   </section>
 
-  <section id="services" class="services ">
+  <section class="services fade-in" id="services">
     <h2 class="heading">My Services</h2>
 
     <div class="services-container">
@@ -130,7 +143,7 @@
     </div>
   </section> 
 
-  <section id="portfolio" class="portfolio ">
+  <section class="portfolio fade-in" id="portfolio">
     <h2 class="heading">Proven Results in Action</h2>
     <p>
       Every trade tells a story. Here’s a showcase of my most successful setups, <br>precise market entries, 
@@ -164,38 +177,59 @@
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
+  <section class="testimonials fade-in" id="testimonials">
     <h2 style="color: #fff;" class="heading">Testimonies</h2>
     <div class="testimonial-container">
       <div class="testimonial active">
         <img class="testimonial-img" src="./images/african-5559755_640.jpg" alt="">
         <h4>- Sarah, Student</h4>
         <p>"Emmanuel’s mentorship completely changed my trading journey. I went from losing money to consistent profits in just 3 months!"</p>
+      <span class="Star">⭐⭐⭐⭐</span>
       </div>
       <div class="testimonial">
         <img class="testimonial-img" src="./images/download.jpg" alt="">
         <h4>- John, Trader</h4>
         <p>"The VIP signals are accurate and timely. I never thought Forex could be this easy until I joined his program."</p>
+      <span class="Star">⭐⭐⭐</span>
       </div>
       <div class="testimonial">
         <img class="testimonial-img" src="./images/beautiful-girl-8883604_640.jpg" alt="">
         <h4>- Grace, Learner</h4>
         <p>"The trading course is beginner-friendly yet powerful. Highly recommend it to anyone serious about learning Forex."</p>
+      <span class="Star">⭐⭐⭐⭐⭐</span>
       </div>
       <div class="testimonial">
         <img class="testimonial-img" src="./images/testi 4.jpg" alt="">
         <h4>- John D.</h4>
         <p>"This mentorship completely changed my trading game. I now trade with confidence!"</p>
+      <span class="Star">⭐⭐⭐⭐</span>
       </div>
       <div class="testimonial">
         <img class="testimonial-img" src="./images/woman-6112091_1280.jpg" alt="">
         <h4>- Sarah K.</h4>
         <p>"The signals are accurate and easy to follow. Best decision I ever made!"</p>
+      <span class="Star">⭐⭐⭐</span>
       </div>
     </div>
   </section> 
 
-<section id="stats" class="stats">
+  <section class="faq fade-in" id="faq">
+    <h2 class="heading">Frequently Asked <span>Questions</span></h2>
+    <div class="faq-item">
+      <h4>How long does mentorship last?</h4>
+      <p>Mentorship runs for <strong>3 Month</strong> with lifetime access to materials.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need prior experience?</h4>
+      <p>No. My training covers beginner to advanced strategies.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What platforms do you trade on?</h4>
+      <p>I trade on TradingView, MT4, MT5, Exness, and Bybit.</p>
+    </div>
+  </section>
+
+<section class="contact fade-in" id="contact">
   <div class="stats-container">
     <div class="stat-box">
       <h3><span class="counter" data-target="4">0</span>+</h3>
@@ -216,7 +250,7 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta fade-in">
   <div class="cta-content">
     <h2>Ready to Start Your Trading Journey?</h2>
     <p>Join hundreds of traders learning and profiting every day with my mentorship & signals.</p>
@@ -225,18 +259,28 @@
 </section>
 
 
-  <section id="contact" class="contact ">
+  <section id="contact" class="contact fade-in">
     <h2 class="heading">Contact Me</h2>
     <p>I’d love to hear from you! Reach out via the form below or connect on social media. <br>below</p>
     <div class="contact-form">
-      <form action="">
+      <!-- <form action="">
         <div class="form-row">
           <input type="text" placeholder="Enter Your Name" required>
           <input type="email" placeholder="Enter Your Email" required>
         </div>
         <textarea cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
         <input type="submit" value="Submit" class="send">
-      </form>
+      </form> -->
+
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+          <input type="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+        <input type="submit" value="Submit" class="send">
+      </form> 
+
     </div>
     
     <div class="contact-list">
@@ -254,6 +298,7 @@
   <footer>
     <p>© 2025 MyBrand | All Rights Reserved</p>
   </footer>
+
 
   <script src="main.js"></script>
 </body>
