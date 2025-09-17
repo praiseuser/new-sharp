@@ -164,7 +164,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 100px;
   flex-direction: column;
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -198,24 +197,24 @@ header .logo {
 }
 
 .home h1 {
-  font-size: 42px;
+  font-size: 45px;
   font-weight: 700;
 }
 
 .home h1 span {
   color: #0ef;
+  font-weight: 600;
 }
 
 .home h3 {
-  font-size: 22px;
-  margin: 15px 0;
+  font-size: 25px;
+  margin: 10px 0;
   font-weight: 400;
-  opacity: 0.9;
 }
 
 .home .btn {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 12px 25px;
   background: #0ef;
   color: #000;
@@ -228,7 +227,7 @@ header .logo {
 .home .btn:hover {
   background: #fff;
   color: #0ef;
-  box-shadow: 0 0 12px #0ef;
+  box-shadow: 0 0 10px #0ef;
 }
 
 .about {
@@ -239,7 +238,7 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -248,6 +247,7 @@ header .logo {
   flex: 1 1 350px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .about-img img {
@@ -264,11 +264,13 @@ header .logo {
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 300;
   line-height: 1.8;
-  margin-bottom: 20px;
   color: #ddd;
+  cursor: pointer;
 }
+
 
 @media (max-width: 992px) {
   .about-content {
@@ -306,6 +308,7 @@ header .logo {
   width: 280px;
   text-align: center;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .service-box:hover {
@@ -393,7 +396,7 @@ header .logo {
 .service-box .service-btn:hover {
   background: #0ef;
   color: #000;
-  box-shadow: 0 0 12px #0ef;
+  box-shadow: 0 0 10px #0ef;
 }
 
 .portfolio {
@@ -568,6 +571,16 @@ header .logo {
   background: #222;
   color: #fff;
 }
+
+.contact-form textarea {
+  width: 100%;
+  /* makes it same width as inputs */
+  height: 150px;
+  /* fixed height */
+  resize: none;
+  /* prevent resizing */
+}
+
 
 .contact-form .send {
   background: #0ef;
@@ -765,9 +778,54 @@ header .logo {
 }
 
 footer {
-  padding: 20px;
-  text-align: center;
+  padding: 10px 20px;
+  /* base padding */
   background: #111;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  /* stack by default (mobile first) */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  /* space between items */
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .contact-icon a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+footer .contact-icon a:hover {
+  color: #0ef;
+}
+
+.logos {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0ef;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Large screens (desktop) */
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    /* align items horizontally */
+    justify-content: space-between;
+    /* spread logo, text, icons */
+    text-align: left;
+    padding: 15px 80px;
+    /* add bigger left/right padding */
+  }
 }
