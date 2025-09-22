@@ -6,38 +6,53 @@
   box-sizing: border-box;
   font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-
-body {
-  background: #1a1a1a;
-  color: #fff;
-  line-height: 1.6;
+/* 🎨 Define Dark Mode as Default */
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --secondary-text: #dddddd;
+  --muted-text: #aaaaaa;
+  --box-bg: #222;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --main-color: #0ef;
 }
 
+/* 🌞 Light Mode Overrides */
 body.light-mode {
-  background: #f9f9f9;
-  color: #111;
+  --bg-color: #f9f9f9;
+  --text-color: #111111;
+  --secondary-text: #333333;
+  --muted-text: #555555;
+  --box-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --main-color: #0ef; /* Accent stays same */
 }
 
-body.light-mode header {
-  background: rgba(255, 255, 255, 0.9);
+/* ✅ Apply variables everywhere */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: 0.3s ease;
 }
 
-body.light-mode .navbar a {
-  color: #111;
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+  color: var(--text-color);
+  transition: 0.3s ease;
 }
 
-body.light-mode .navbar a:hover {
-  color: #0ef;
+header {
+  background: var(--header-bg);
 }
 
-body.light-mode .service-box {
-  background: #eee;
-}
-
-body.light-mode .contact-form input,
-body.light-mode .contact-form textarea {
-  background: #f1f1f1;
-  color: #111;
+.service-box,
+.social-box,
+.contact-icon a,
+.contact-form input,
+.contact-form textarea,
+footer {
+  background: var(--box-bg);
+  color: var(--text-color);
 }
 
 header {
@@ -158,7 +173,23 @@ header .logo {
   width: 100%;
 }
 
+/* Keep home text white in both modes */
+.home h1,
+.home h3,
+.home p {
+  color: #fff;
+}
+
+/* Optional: If you want a slightly softer white on dark mode */
+body.dark-mode .home h1,
+body.dark-mode .home h3,
+body.dark-mode .home p {
+  color: #f9f9f9;
+}
+
+
 .home {
+  padding-top: 100px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -255,7 +286,6 @@ header .logo {
   max-width: 400px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .about-text {
@@ -267,9 +297,14 @@ header .logo {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8;
-  color: #ddd;
+  color: #ddd;   /* light text for dark mode */
   cursor: pointer;
 }
+
+body.light-mode .about-text p {
+  color: #111;  /* dark readable text */
+}
+
 
 
 @media (max-width: 992px) {
@@ -294,6 +329,7 @@ header .logo {
   }
 }
 
+
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -303,13 +339,49 @@ header .logo {
 
 .service-box {
   background: #222;
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
   width: 280px;
-  text-align: center;
   transition: 0.3s;
+  text-align: center;
+  color: var(--text-color);
   cursor: pointer;
+
 }
+
+.service-box h3,
+.service-box p,
+.service-box a {
+  color: var(--text-color);
+}
+
+/* Light Mode */
+body.light-mode .service-box {
+  background: #fff;         /* white card background */
+  color: #111;              /* dark text */
+  border: 1px solid #ddd;   /* subtle border for visibility */
+}
+
+body.light-mode .service-box h3,
+body.light-mode .service-box p {
+  color: #111;              /* force readable dark text */
+}
+
+body.light-mode .service-box i {
+  color: #0ef;              /* keep accent icon color */
+}
+
+body.light-mode .service-box .service-btn {
+  color: #0ef;              /* button text stays accent */
+  border: 2px solid #0ef;
+  background: transparent;
+}
+
+body.light-mode .service-box .service-btn:hover {
+  background: #0ef;
+  color: #000;
+}
+
 
 .service-box:hover {
   transform: translateY(-6px);
@@ -320,20 +392,6 @@ header .logo {
   font-size: 40px;
   margin-bottom: 12px;
   color: #0ef;
-}
-
-.tool {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.tool h4 {
-  margin-bottom: 1.5rem;
-}
-
-.tool img {
-  width: 40px;
-  border-radius: 4px;
 }
 
 .services,
@@ -399,6 +457,135 @@ header .logo {
   box-shadow: 0 0 10px #0ef;
 }
 
+
+.tool {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tool h4 {
+  margin-bottom: 1.5rem;
+}
+
+.tool img {
+  width: 40px;
+  border-radius: 4px;
+}
+
+
+.social-content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-box {
+  flex: 1 1 250px; 
+  max-width: 300px;
+}
+
+.social-box i {
+  font-size: 40px;
+  color: #0ef; 
+  margin-bottom: 10px;
+  display: block;
+}
+.bxl-telegram{
+  color: #007bff;
+}
+.bxl-whatsapp{
+  color: rgb(25, 211, 65);
+}
+.bxl-facebook{
+  color: #78abe6;
+}
+
+.social-box {
+  border: 2px solid #0ef;
+  background: var(--box-bg);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1 1 200px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.social-box p,
+.social-box a {
+  color: var(--text-color);
+}
+
+body.light-mode .social-box {
+  background: #fff;
+  color: #111;
+  border: 2px solid #0ef;
+}
+
+body.light-mode .social-box p,
+body.light-mode .social-box a {
+  color: #111; 
+}
+
+body.light-mode .social-box i {
+  color: #0ef; 
+}
+
+
+
+.social-box p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--main-color);
+  border: 1px solid #0ef;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #0ef;
+  color: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .social-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .social-box {
+    width: 100%; 
+    max-width: 500px; 
+  }
+}
+
 .portfolio {
   padding: 80px 50px;
   text-align: center;
@@ -438,14 +625,13 @@ header .logo {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  color: #fff; /* White text for dark mode */
   width: 80%;
   padding: 12px;
   text-align: center;
   border-radius: 12px;
   border: 1px solid #0ef;
-
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
 }
@@ -460,7 +646,7 @@ header .logo {
 .portfolio-text h4 {
   margin-bottom: 5px;
   font-size: 16px;
-  color: #0ef;
+  color: #0ef; /* Accent */
   opacity: 0;
   animation: slideInLeft 0.9s ease forwards;
   animation-delay: 0.4s;
@@ -478,7 +664,6 @@ header .logo {
     opacity: 0;
     transform: translateX(-30px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -490,7 +675,6 @@ header .logo {
     opacity: 0;
     transform: translateX(30px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -504,12 +688,34 @@ header .logo {
   transition: all 0.3s ease;
 }
 
+/* ✅ Light Mode Overrides */
+body.light-mode .portfolio-text {
+  background: rgba(255, 255, 255, 0.9); /* Light overlay */
+  color: #111; /* Dark text */
+  border: 1px solid #0ef;
+}
+
+body.light-mode .portfolio-text h4 {
+  color: #0ef; /* Keep accent */
+}
+
+body.light-mode .portfolio-box:hover .portfolio-text {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
+}
+
+
 .Star {
   color: #000;
   width: 40px;
 }
 
-.contact {
+.stats{
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.contact  {
   padding: 80px 50px;
   text-align: center;
 }
@@ -551,9 +757,10 @@ header .logo {
 
 .contact-icon a:hover {
   background: #0ef;
+  /* border: 1px solid #000; */
   color: #000;
   transform: scale(1.1);
-  box-shadow: 0 0 15px #0ef;
+  box-shadow: 0 0 10px #0ef;
 }
 
 .contact-form {
@@ -574,11 +781,8 @@ header .logo {
 
 .contact-form textarea {
   width: 100%;
-  /* makes it same width as inputs */
   height: 150px;
-  /* fixed height */
   resize: none;
-  /* prevent resizing */
 }
 
 
@@ -596,7 +800,6 @@ header .logo {
   box-shadow: 0 0 12px #0ef;
 }
 
-/* Arrange name + email side by side */
 .contact-form .form-row {
   display: flex;
   gap: 15px;
@@ -678,13 +881,20 @@ header .logo {
   margin: auto;
 }
 
+/* Default (Dark Mode) */
 .faq-item {
-  background: #111;
+  background: var(--box-bg); /* use variable */
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 20px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body.light-mode .faq-item {
+  background: #fff; /* white in light mode */
+  color: var(--text-color); /* dark text */
 }
 
 .faq-item h4 {
@@ -779,24 +989,23 @@ header .logo {
 
 footer {
   padding: 10px 20px;
-  /* base padding */
   background: #111;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   display: flex;
   flex-direction: column;
-  /* stack by default (mobile first) */
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 10px;
-  /* space between items */
 }
 
 footer p {
   margin: 0;
+  color: rgba(255, 255, 255, 0.7); 
 }
+
 
 footer .contact-icon a {
   color: #fff;
@@ -805,27 +1014,20 @@ footer .contact-icon a {
   transition: 0.3s;
 }
 
-footer .contact-icon a:hover {
-  color: #0ef;
-}
-
+ 
 .logos {
   font-size: 24px;
   font-weight: 600;
   color: #0ef;
   text-decoration: none;
   letter-spacing: 1px;
-}
+} 
 
-/* 🔹 Large screens (desktop) */
 @media (min-width: 768px) {
   footer {
     flex-direction: row;
-    /* align items horizontally */
     justify-content: space-between;
-    /* spread logo, text, icons */
     text-align: left;
     padding: 15px 80px;
-    /* add bigger left/right padding */
   }
 }

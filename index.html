@@ -1,295 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <header>
+      <a href="#" class="logo">FX Flow</a>
 
-<body>
+      <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Me</a>
+      </nav>
 
-  <header>
-    <a href="#" class="logo">MyBrand</a>
-
-    <nav class="navbar" id="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact Me</a>
-    </nav>
-
-    <div class="header-controls">
-      <div class="theme-toggle" id="theme-toggle">
-        <i class="bx bx-moon"></i>
+      <div class="header-controls">
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="bx bx-moon"></i>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          <i class="bx bx-menu"></i>
+        </div>
       </div>
-      <div class="menu-icon" id="menu-icon">
-        <i class="bx bx-menu"></i>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="home fade-in" id="home">
-    <div class="home-content">
-      <div class="home-img">
-        <img src="./images/finance-5771541_1280.jpg" alt="My Photo">
-      </div>
-      <h1>Hi, I’m <span>Ebah Emmanuel</span></h1>
-      <h3>Forex Mentor & Developer</h3>
-      <p>I mentor traders, provide VIP signals, and build modern web projects.</p>
-      <!-- <a href="#portfolio" class="btn">View Projects</a> -->
-      <a href="#contact" class="btn">Hire Me</a>
-      <a href="cv.pdf" class="btn" download>Download CV</a>
-    </div>
-  </section>
-
-
-  <section class="about fade-in" id="about">
-    <h2 class="heading">About Me</h2>
-    <div class="about-content">
-      <div class="about-img">
-        <img src="./images/finance-5771541_1280.jpg" alt="My Photo">
-      </div>
-      <div class="about-text">
+    <section class="home fade-in" id="home">
+      <div class="home-content">
+        <div class="home-img">
+          <img src="./images/finance-5771541_1280.jpg" alt="My Photo" />
+        </div>
+        <h1>Hi, I’m <span>Ebah Emmanuel</span></h1>
+        <h3>Forex Mentor & Developer</h3>
         <p>
-          I’m <strong>Ebah Emmanuel</strong>, a passionate Forex trader and mentor with over
-          <strong>4 years of experience</strong> in the financial markets. I specialize in
-          <strong>technical analysis, risk management, and trading psychology</strong>, developing
-          proven strategies that deliver consistent results. My mission is to help traders avoid
-          common pitfalls, achieve sustainable growth, and trade with confidence through mentorship,
-          structured learning, and signal guidance.
+          I mentor traders, provide VIP signals, and build modern web projects.
+        </p>
+        <!-- <a href="#portfolio" class="btn">View Projects</a> -->
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="cv.pdf" class="btn" download>Download CV</a>
+      </div>
+    </section>
+
+    <section class="about fade-in" id="about">
+      <h2 class="heading">About Me</h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="./images/finance-5771541_1280.jpg" alt="My Photo" />
+        </div>
+        <div class="about-text">
+          <p>
+            I’m <strong>Ebah Emmanuel</strong>, a passionate Forex trader and
+            mentor with over <strong>4 years of experience</strong> in the
+            financial markets. I specialize in
+            <strong
+              >technical analysis, risk management, and trading
+              psychology</strong
+            >, developing proven strategies that deliver consistent results. My
+            mission is to help traders avoid common pitfalls, achieve
+            sustainable growth, and trade with confidence through mentorship,
+            structured learning, and signal guidance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services fade-in" id="services">
+      <h2 class="heading">My Services</h2>
+
+      <div class="services-container">
+        <div class="service-box">
+          <i class="bx bx-book-open"></i>
+          <h3>Premium Trading Course</h3>
+          <p>
+            Unlock Forex trading secrets with a step-by-step course that covers
+            beginner to advanced strategies.
+          </p>
+          <a href="your-course-link.html" class="btn service-btn"
+            >Buy Now - $24.5</a
+          >
+        </div>
+
+        <div class="service-box">
+          <i class="bx bx-user-voice"></i>
+          <h3>1-on-1 <br />Mentorship</h3>
+          <p>
+            Get tailored mentorship, proven strategies, and personal guidance to
+            become a disciplined trader.
+          </p>
+          <a href="your-mentorship-link.html" class="btn service-btn"
+            >Buy Now - $49.5</a
+          >
+        </div>
+
+        <div class="service-box">
+          <i class="bx bx-signal-5"></i>
+          <h3>Exclusive VIP <br />Signals</h3>
+          <p>
+            Gain instant access to daily trade signals and setups so you can
+            trade smart and consistently profit.
+          </p>
+          <a href="your-vip-link.html" class="btn service-btn">Buy Now - $20</a>
+        </div>
+      </div>
+
+      <div class="tool">
+        <h4>Tools I Use</h4>
+        <img src="./images/tradingview.png" alt="" />
+        <img src="./images/bybit.png" alt="" />
+        <img src="./images/exness.jpg" alt="" />
+        <img src="./images/metatrader 4.png" alt="" />
+        <img src="./images/metatrader 5.png" alt="" />
+      </div>
+
+      <div class="services-container">
+        <div class="service-box">
+          <i class="bx bx-chalkboard"></i>
+          <h3>Expert Mentorship</h3>
+          <p>
+            Learn directly from my 4+ years of trading experience with
+            personalized strategies and techniques.
+          </p>
+        </div>
+        <div class="service-box">
+          <i class="bx bx-pulse"></i>
+          <h3>Exclusive VIP Signals</h3>
+          <p>
+            Get high-probability setups daily so you enter and exit trades with
+            confidence.
+          </p>
+        </div>
+        <div class="service-box">
+          <i class="bx bx-wallet"></i>
+          <h3>Smart Portfolio Management</h3>
+          <p>
+            Let me handle your trading account with proven strategies designed
+            to maximize returns.
+          </p>
+        </div>
+        <div class="service-box">
+          <i class="bx bx-book-open"></i>
+          <h3>Premium Learning Resources</h3>
+          <p>
+            Access webinars, guides, and tutorials to sharpen your skills and
+            achieve consistent profits.
+          </p>
+        </div>
+      </div>
+
+      <section class="social-content fade-in">
+        <div class="social-container">
+          <div class="social-box">
+            <i class="bx bxl-telegram"></i>
+            <p>Message Me On Telegram</p>
+            <a
+              href="https://t.me/Fx_flow_ceo?text=Hi%20there!%20Thanks%20for%20reaching%20out!%20I'm%20glad%20you're%20interested%20in%20trading%20with%20me.%20How%20can%20I%20help%20you%20today%20with%20forex%20trading%2C%20strategies%2C%20or%20anything%20else%3F"
+              class="btn social-btn"
+              target="_blank"
+            >
+              Join now
+            </a>
+          </div>
+
+          <div class="social-box">
+            <i class="bx bxl-whatsapp"></i>
+            <p>Message Me On Whatsapp</p>
+            <a
+              href="https://wa.me/23408102964972?text=Hello!%20Welcome%20to%20my%20trading%20corner.%20I'm%20here%20to%20help%20with%20any%20questions%20about%20forex%20trading%2C%20market%20analysis%2C%20or%20trading%20tools.%20Feel%20free%20to%20ask!"
+              class="btn social-btn"
+              target="_blank"
+            >
+              Join now
+            </a>
+          </div>
+
+          <div class="social-box">
+            <i class="bx bxl-facebook"></i>
+            <p>Message Me On Facebook</p>
+            <a 
+              href="https://m.me/ebah.emmanuel.77?source=qr_link_share" 
+              class="btn social-btn" 
+              target="_blank"
+            >
+              Join now
+            </a>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+
+    <section class="portfolio fade-in" id="portfolio">
+      <h2 class="heading">Proven Results in Action</h2>
+      <p>
+        Every trade tells a story. Here’s a showcase of my most successful
+        setups, <br />precise market entries, and profitable strategies that
+        reflect years of consistency and mastery in the <br />financial markets.
+      </p>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="./images/finance-5771541_1280.jpg" alt="Project 1" />
+          <div class="portfolio-text">
+            <h4>Breakout Gold Win</h4>
+            <hr />
+            <p>Caught a 260-pip breakout on XAUUSD with perfect timing.</p>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./images/finance-5771541_1280.jpg" alt="Project 2" />
+          <div class="portfolio-text">
+            <h4>NFP Day Setup</h4>
+            <hr />
+            <p>Maximized 1:4 RR trade on USDCAD after NFP data.</p>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./images/finance-5771541_1280.jpg" alt="Project 3" />
+          <div class="portfolio-text">
+            <h4>Crypto Swing Ride</h4>
+            <hr />
+            <p>Made over 400% ROI on ETH in minutes. Short trade mastery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials fade-in" id="testimonials">
+      <h2 style="color: #fff" class="heading">Testimonies</h2>
+      <div class="testimonial-container">
+        <div class="testimonial active">
+          <img
+            class="testimonial-img"
+            src="./images/african-5559755_640.jpg"
+            alt=""
+          />
+          <h4>- Sarah, Student</h4>
+          <p>
+            "Emmanuel’s mentorship completely changed my trading journey. I went
+            from losing money to consistent profits in just 3 months!"
+          </p>
+          <span class="Star">⭐⭐⭐⭐</span>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-img" src="./images/download.jpg" alt="" />
+          <h4>- John, Trader</h4>
+          <p>
+            "The VIP signals are accurate and timely. I never thought Forex
+            could be this easy until I joined his program."
+          </p>
+          <span class="Star">⭐⭐⭐</span>
+        </div>
+        <div class="testimonial">
+          <img
+            class="testimonial-img"
+            src="./images/beautiful-girl-8883604_640.jpg"
+            alt=""
+          />
+          <h4>- Grace, Learner</h4>
+          <p>
+            "The trading course is beginner-friendly yet powerful. Highly
+            recommend it to anyone serious about learning Forex."
+          </p>
+          <span class="Star">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-img" src="./images/testi 4.jpg" alt="" />
+          <h4>- John D.</h4>
+          <p>
+            "This mentorship completely changed my trading game. I now trade
+            with confidence!"
+          </p>
+          <span class="Star">⭐⭐⭐⭐</span>
+        </div>
+        <div class="testimonial">
+          <img
+            class="testimonial-img"
+            src="./images/woman-6112091_1280.jpg"
+            alt=""
+          />
+          <h4>- Sarah K.</h4>
+          <p>
+            "The signals are accurate and easy to follow. Best decision I ever
+            made!"
+          </p>
+          <span class="Star">⭐⭐⭐</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq fade-in" id="faq">
+      <h2 class="heading">Frequently Asked <span>Questions</span></h2>
+      <div class="faq-item">
+        <h4>How long does mentorship last?</h4>
+        <p>
+          Mentorship runs for <strong>3 Month</strong> with lifetime access to
+          materials.
         </p>
       </div>
-
-    </div>
-
-
-  </section>
-
-  <section class="services fade-in" id="services">
-    <h2 class="heading">My Services</h2>
-
-    <div class="services-container">
-      <div class="service-box">
-        <i class="bx bx-book-open"></i>
-        <h3>Premium Trading Course</h3>
-        <p>Unlock Forex trading secrets with a step-by-step course that covers beginner to advanced strategies.</p>
-        <a href="your-course-link.html" class="btn service-btn">Buy Now - $24.5</a>
+      <div class="faq-item">
+        <h4>Do I need prior experience?</h4>
+        <p>No. My training covers beginner to advanced strategies.</p>
       </div>
+      <div class="faq-item">
+        <h4>What platforms do you trade on?</h4>
+        <p>I trade on TradingView, MT4, MT5, Exness, and Bybit.</p>
+      </div>
+    </section>
 
-      <div class="service-box">
-        <i class="bx bx-user-voice"></i>
-        <h3>1-on-1 <br>Mentorship</h3>
-        <p>Get tailored mentorship, proven strategies, and personal guidance to become a disciplined trader.</p>
-        <a href="your-mentorship-link.html" class="btn service-btn">Buy Now - $49.5</a>
-      </div>
-
-      <div class="service-box">
-        <i class="bx bx-signal-5"></i>
-        <h3>Exclusive VIP <br>Signals</h3>
-        <p>Gain instant access to daily trade signals and setups so you can trade smart and consistently profit.</p>
-        <a href="your-vip-link.html" class="btn service-btn">Buy Now - $20</a>
-      </div>
-    </div>
-
-    <div class="tool">
-      <h4>Tools I Use</h4>
-      <img src="./images/tradingview.png" alt="">
-      <img src="./images/bybit.png" alt="">
-      <img src="./images/exness.jpg" alt="">
-      <img src="./images/metatrader 4.png" alt="">
-      <img src="./images/metatrader 5.png" alt="">
-    </div>
-
-    <div class="services-container">
-      <div class="service-box">
-        <i class='bx bx-chalkboard'></i>
-        <h3>Expert Mentorship</h3>
-        <p>Learn directly from my 4+ years of trading experience with personalized strategies and techniques.</p>
-      </div>
-      <div class="service-box">
-        <i class="bx bx-pulse"></i>
-        <h3>Exclusive VIP Signals</h3>
-        <p>Get high-probability setups daily so you enter and exit trades with confidence.</p>
-      </div>
-      <div class="service-box">
-        <i class="bx bx-wallet"></i>
-        <h3>Smart Portfolio Management</h3>
-        <p>Let me handle your trading account with proven strategies designed to maximize returns.</p>
-      </div>
-      <div class="service-box">
-        <i class="bx bx-book-open"></i>
-        <h3>Premium Learning Resources</h3>
-        <p>Access webinars, guides, and tutorials to sharpen your skills and achieve consistent profits.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio fade-in" id="portfolio">
-    <h2 class="heading">Proven Results in Action</h2>
-    <p>
-      Every trade tells a story. Here’s a showcase of my most successful setups, <br>precise market entries,
-      and profitable strategies that reflect years of consistency and mastery in the <br>financial markets.
-    </p>
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="./images/finance-5771541_1280.jpg" alt="Project 1">
-        <div class="portfolio-text">
-          <h4>Breakout Gold Win</h4>
-          <hr>
-          <p>Caught a 260-pip breakout on XAUUSD with perfect timing.</p>
+    <section class="stats fade-in" id="">
+      <div class="stats-container">
+        <div class="stat-box">
+          <h3><span class="counter" data-target="4">0</span>+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3><span class="counter" data-target="200">0</span>+</h3>
+          <p>Students Mentored</p>
+        </div>
+        <div class="stat-box">
+          <h3><span class="counter" data-target="500">0</span>+</h3>
+          <p>Signals Sent</p>
+        </div>
+        <div class="stat-box">
+          <h3><span class="counter" data-target="90">0</span>%</h3>
+          <p>Win Rate</p>
         </div>
       </div>
-      <div class="portfolio-box">
-        <img src="./images/finance-5771541_1280.jpg" alt="Project 2">
-        <div class="portfolio-text">
-          <h4>NFP Day Setup</h4>
-          <hr>
-          <p>Maximized 1:4 RR trade on USDCAD after NFP data.</p>
-        </div>
+    </section>
+
+    <section class="cta fade-in">
+      <div class="cta-content">
+        <h2>Ready to Start Your Trading Journey?</h2>
+        <p>
+          Join my <h1>Telegram</h1> group where hundreds of traders learning and profiting every day with my
+          mentorship & signals.
+        </p>
+        <a 
+        href="https://t.me/fx_flow_public" 
+        class="btn" 
+        target="_blank"
+      >
+        Join Now
+      </a>
+      
       </div>
-      <div class="portfolio-box">
-        <img src="./images/finance-5771541_1280.jpg" alt="Project 3">
-        <div class="portfolio-text">
-          <h4>Crypto Swing Ride</h4>
-          <hr>
-          <p>Made over 400% ROI on ETH in minutes. Short trade mastery.</p>
-        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+      <h2 class="heading">Contact Me</h2>
+      <p>
+        I’d love to hear from you! Reach out via the form below or connect on
+        social media. <br />below
+      </p>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Your Email"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Enter Your Message"
+            required
+          ></textarea>
+          <input type="submit" value="Submit" class="send" />
+        </form>
       </div>
-    </div>
-  </section>
 
-  <section class="testimonials fade-in" id="testimonials">
-    <h2 style="color: #fff;" class="heading">Testimonies</h2>
-    <div class="testimonial-container">
-      <div class="testimonial active">
-        <img class="testimonial-img" src="./images/african-5559755_640.jpg" alt="">
-        <h4>- Sarah, Student</h4>
-        <p>"Emmanuel’s mentorship completely changed my trading journey. I went from losing money to consistent profits
-          in just 3 months!"</p>
-        <span class="Star">⭐⭐⭐⭐</span>
+      <div class="contact-list">
+        <li><i class="bx bx-mail-send"></i> contact@gmail.com</li>
+        <li><i class="bx bx-phone"></i> +234 810 296 4972</li>
       </div>
-      <div class="testimonial">
-        <img class="testimonial-img" src="./images/download.jpg" alt="">
-        <h4>- John, Trader</h4>
-        <p>"The VIP signals are accurate and timely. I never thought Forex could be this easy until I joined his
-          program."</p>
-        <span class="Star">⭐⭐⭐</span>
+    </section>
+
+    <footer>
+      <a href="#" class="logos">FX Flow</a>
+      <p>© 2025 Fx Flow | All Rights Reserved</p>
+      <div class="contact-icon">
+        <a
+          href="https://t.me/Fx_flow_ceo?text=Hi%20there!%20Thanks%20for%20reaching%20out!%20I'm%20glad%20you're%20interested%20in%20trading%20with%20me.%20How%20can%20I%20help%20you%20today%20with%20forex%20trading%2C%20strategies%2C%20or%20anything%20else%3F"
+          target="_blank"
+        >
+          <i class="bx bxl-telegram"></i>
+        </a>
+
+        <a
+          href="https://wa.me/23408102964972?text=Hello!%20Welcome%20to%20my%20trading%20corner.%20I'm%20here%20to%20help%20with%20any%20questions%20about%20forex%20trading%2C%20market%20analysis%2C%20or%20trading%20tools.%20Feel%20free%20to%20ask!"
+          target="_blank"
+        >
+          <i class="bx bxl-whatsapp"></i>
+        </a>
+
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
       </div>
-      <div class="testimonial">
-        <img class="testimonial-img" src="./images/beautiful-girl-8883604_640.jpg" alt="">
-        <h4>- Grace, Learner</h4>
-        <p>"The trading course is beginner-friendly yet powerful. Highly recommend it to anyone serious about learning
-          Forex."</p>
-        <span class="Star">⭐⭐⭐⭐⭐</span>
-      </div>
-      <div class="testimonial">
-        <img class="testimonial-img" src="./images/testi 4.jpg" alt="">
-        <h4>- John D.</h4>
-        <p>"This mentorship completely changed my trading game. I now trade with confidence!"</p>
-        <span class="Star">⭐⭐⭐⭐</span>
-      </div>
-      <div class="testimonial">
-        <img class="testimonial-img" src="./images/woman-6112091_1280.jpg" alt="">
-        <h4>- Sarah K.</h4>
-        <p>"The signals are accurate and easy to follow. Best decision I ever made!"</p>
-        <span class="Star">⭐⭐⭐</span>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section class="faq fade-in" id="faq">
-    <h2 class="heading">Frequently Asked <span>Questions</span></h2>
-    <div class="faq-item">
-      <h4>How long does mentorship last?</h4>
-      <p>Mentorship runs for <strong>3 Month</strong> with lifetime access to materials.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Do I need prior experience?</h4>
-      <p>No. My training covers beginner to advanced strategies.</p>
-    </div>
-    <div class="faq-item">
-      <h4>What platforms do you trade on?</h4>
-      <p>I trade on TradingView, MT4, MT5, Exness, and Bybit.</p>
-    </div>
-  </section>
-
-  <section class="contact fade-in" id="contact">
-    <div class="stats-container">
-      <div class="stat-box">
-        <h3><span class="counter" data-target="4">0</span>+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="200">0</span>+</h3>
-        <p>Students Mentored</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="500">0</span>+</h3>
-        <p>Signals Sent</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="90">0</span>%</h3>
-        <p>Win Rate</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta fade-in">
-    <div class="cta-content">
-      <h2>Ready to Start Your Trading Journey?</h2>
-      <p>Join hundreds of traders learning and profiting every day with my mentorship & signals.</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <section id="contact" class="contact fade-in">
-    <h2 class="heading">Contact Me</h2>
-    <p>I’d love to hear from you! Reach out via the form below or connect on social media. <br>below</p>
-    <div class="contact-form">
-      <!-- <form action="">
-        <div class="form-row">
-          <input type="text" placeholder="Enter Your Name" required>
-          <input type="email" placeholder="Enter Your Email" required>
-        </div>
-        <textarea cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-        <input type="submit" value="Submit" class="send">
-      </form> -->
-
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Enter Your Name" required>
-          <input type="email" name="email" placeholder="Enter Your Email" required>
-        </div>
-        <textarea name="message" placeholder="Enter Your Message" required></textarea>
-        <input type="submit" value="Submit" class="send">
-      </form>
-
-    </div>
-
-    <div class="contact-list">
-      <li><i class="bx bx-mail-send"></i> contact@gmail.com</li>
-      <li><i class="bx bx-phone"></i> +234 810 296 4972</li>
-    </div>
-  </section>
-
-  <footer>
-    <a href="#" class="logos">MyBrand</a>
-    <p>© 2025 MyBrand | All Rights Reserved</p>
-    <div class="contact-icon">
-      <a href="#"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-      <a href="#"><i class="bx bxl-linkedin"></i></a>
-    </div>
-  </footer>
-
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
