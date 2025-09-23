@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-/* 🎨 Define Dark Mode as Default */
 :root {
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
@@ -17,7 +16,6 @@
   --main-color: #0ef;
 }
 
-/* 🌞 Light Mode Overrides */
 body.light-mode {
   --bg-color: #f9f9f9;
   --text-color: #111111;
@@ -25,10 +23,9 @@ body.light-mode {
   --muted-text: #555555;
   --box-bg: #ffffff;
   --header-bg: rgba(255, 255, 255, 0.9);
-  --main-color: #0ef; /* Accent stays same */
+  --main-color: #0ef; 
 }
 
-/* ✅ Apply variables everywhere */
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -173,14 +170,12 @@ header .logo {
   width: 100%;
 }
 
-/* Keep home text white in both modes */
 .home h1,
 .home h3,
 .home p {
   color: #fff;
 }
 
-/* Optional: If you want a slightly softer white on dark mode */
 body.dark-mode .home h1,
 body.dark-mode .home h3,
 body.dark-mode .home p {
@@ -297,12 +292,12 @@ body.dark-mode .home p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8;
-  color: #ddd;   /* light text for dark mode */
+  color: #ddd;   
   cursor: pointer;
 }
 
 body.light-mode .about-text p {
-  color: #111;  /* dark readable text */
+  color: #111;  
 }
 
 
@@ -355,24 +350,23 @@ body.light-mode .about-text p {
   color: var(--text-color);
 }
 
-/* Light Mode */
 body.light-mode .service-box {
-  background: #fff;         /* white card background */
-  color: #111;              /* dark text */
-  border: 1px solid #ddd;   /* subtle border for visibility */
+  background: #fff;       
+  color: #111;              
+  border: 1px solid #ddd;   
 }
 
 body.light-mode .service-box h3,
 body.light-mode .service-box p {
-  color: #111;              /* force readable dark text */
+  color: #111;            
 }
 
 body.light-mode .service-box i {
-  color: #0ef;              /* keep accent icon color */
+  color: #0ef;            
 }
 
 body.light-mode .service-box .service-btn {
-  color: #0ef;              /* button text stays accent */
+  color: #0ef;              
   border: 2px solid #0ef;
   background: transparent;
 }
@@ -824,7 +818,6 @@ body.light-mode .portfolio-box:hover .portfolio-text {
 .testimonials {
   text-align: center;
   padding: 4rem 2rem;
-  /* background: var(--bg-color, #f9f9f9); */
   background: #111;
   color: #fff;
 }
@@ -881,9 +874,8 @@ body.light-mode .portfolio-box:hover .portfolio-text {
   margin: auto;
 }
 
-/* Default (Dark Mode) */
 .faq-item {
-  background: var(--box-bg); /* use variable */
+  background: var(--box-bg); 
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 20px;
@@ -891,10 +883,9 @@ body.light-mode .portfolio-box:hover .portfolio-text {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Light Mode */
 body.light-mode .faq-item {
-  background: #fff; /* white in light mode */
-  color: var(--text-color); /* dark text */
+  background: #fff; 
+  color: var(--text-color); 
 }
 
 .faq-item h4 {
